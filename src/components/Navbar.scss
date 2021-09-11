@@ -1,0 +1,29 @@
+.navigation-main-container {
+  background-color: $black;
+  height: 58px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: $white-main;
+
+  .icon-logo-group {
+    min-width: 327px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger-menu {
+    display: block;
+
+    .second {
+      margin: 5px 0 5px 0;
+    }
+    .bar {
+      width: 16px;
+      height: 2px;
+      background-color: $white-main;
+    }
+  }
+}
