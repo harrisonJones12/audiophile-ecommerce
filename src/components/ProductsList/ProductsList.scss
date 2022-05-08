@@ -1,0 +1,67 @@
+.products-container {
+  //   margin-top: 32px;
+  height: 750px;
+  position: relative;
+  top: -134px;
+
+  .headphones-outer-wrapper,
+  .speakers-outer-wrapper,
+  .earphones-outer-wrapper {
+    height: 217px;
+    width: 327px;
+    margin: 100px 24px 0 24px;
+
+    .headphones-inner-wrapper,
+    .speakers-inner-wrapper,
+    .earphones-inner-wrapper {
+      background: #f1f1f1;
+      border-radius: 8px;
+      height: 165px;
+
+      .product-name {
+        margin-bottom: 17px;
+      }
+    }
+  }
+
+  .headphones-outer-wrapper {
+    margin-top: 84px;
+  }
+
+  .product-name-button-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headphones-logo {
+    height: 104px;
+    width: 103px;
+  }
+
+  .earphones-middle-wrapper {
+    position: absolute;
+    height: fit-content;
+    margin-top: -40px;
+    margin: -32px auto 0 auto;
+    width: 200px;
+    left: 90px;
+  }
+}
+
+
+.shop-button {
+  width: 52px;
+  align-self: center;
+}
+
+
+.product-name {
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 20px;
+text-align: center;
+letter-spacing: 1.07143px;
+text-transform: uppercase;
+}

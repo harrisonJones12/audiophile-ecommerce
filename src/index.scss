@@ -12,7 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+html {
+  height: 100%;
+}
 // Varibles
 $black: #000;
 $white-main: #fff;
@@ -20,4 +22,6 @@ $white-secondary: #f1f1f1;
 $orange: #d87d4a;
 $orange-lighter: #fbaf85;
 
-@import "components/Navbar.scss";
+@import "components/Navbar/Navbar.scss";
+@import "components/ProductsList/ProductsList.scss";
+@import "container/Home.scss";

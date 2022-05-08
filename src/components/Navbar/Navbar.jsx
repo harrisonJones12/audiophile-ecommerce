@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import Productslist from "components/ProductsList/ProductsList";
+
 function Navbar(props) {
   return (
     <>
@@ -28,6 +30,9 @@ function Navbar(props) {
             </svg>
           </div>
         </nav>
+
+        {/* Product list  */}
+        <Productslist />
       </header>
     </>
   );
