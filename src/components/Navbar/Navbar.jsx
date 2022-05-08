@@ -6,7 +6,7 @@ import Productslist from "components/ProductsList/ProductsList";
 function Navbar(props) {
   return (
     <>
-      <header>
+      <header className="header-container">
         <nav class="navigation-main-container">
           <div className="icon-logo-group">
             <div className="hamburger-menu">
