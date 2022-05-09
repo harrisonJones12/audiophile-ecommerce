@@ -2,6 +2,7 @@ import React from "react";
 import headphonesLogo from "components/ProductsList/assets/image-category-thumbnail-headphones.png";
 import speakerLogo from "components/ProductsList/assets/image-category-thumbnail-speakers.png";
 import earphonesLogo from "components/ProductsList/assets/image-category-thumbnail-earphones.png";
+
 function Productslist() {
   //earphones JSX
   const earphones = () => {
@@ -18,7 +19,20 @@ function Productslist() {
             <span className="product-name">earphones</span>
             <button className="shop-button">
               <span className="shop-text">shop</span>
-              {/* //icon goes here */}
+              <svg
+                className="icon-right"
+                width="8"
+                height="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.322 1l5 5-5 5"
+                  stroke="#D87D4A"
+                  stroke-width="2"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -45,7 +59,20 @@ function Productslist() {
             <span className="product-name">headphones</span>
             <button className="shop-button">
               <span className="shop-text">shop</span>
-              {/* //icon goes here */}
+              <svg
+                className="icon-right"
+                width="8"
+                height="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.322 1l5 5-5 5"
+                  stroke="#D87D4A"
+                  stroke-width="2"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -57,25 +84,34 @@ function Productslist() {
   //speakers JSX
   const speakers = () => {
     return (
-      <div className="earphones-outer-wrapper">
-        {/* //Product logo goes here */}
-        <div className="earphones-middle-wrapper">
-          <img
-            src={earphonesLogo}
-            className="headphones-logo"
-            alt="headphones"
-          />
+      <div className="speakers-outer-wrapper">
+        <div className="speakers-middle-wrapper">
+          {/* //Product logo goes here */}
+          <img src={speakerLogo} className="headphones-logo" alt="headphones" />
+
+          {/* //this is here so that we can have background that is not the full height of the outter container */}
           <div className="product-name-button-wrapper">
-            <span className="product-name">earphones</span>
+            <span className="product-name">speakers</span>
             <button className="shop-button">
               <span className="shop-text">shop</span>
-              {/* //icon goes here */}
+              <svg
+                className="icon-right"
+                width="8"
+                height="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.322 1l5 5-5 5"
+                  stroke="#D87D4A"
+                  stroke-width="2"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </button>
           </div>
         </div>
-        <div className="earphones-inner-wrapper">
-          {/* //this is here so that we can have background that is not the full height of the outter container */}
-        </div>
+        <div className="speakers-inner-wrapper"></div>
       </div>
     );
   };
@@ -84,26 +120,7 @@ function Productslist() {
     <>
       <div className="products-container">
         {headphones()}
-        <div className="speakers-outer-wrapper">
-          <div className="speakers-middle-wrapper">
-            {/* //Product logo goes here */}
-            <img
-              src={speakerLogo}
-              className="headphones-logo"
-              alt="headphones"
-            />
-
-            {/* //this is here so that we can have background that is not the full height of the outter container */}
-            <div className="product-name-button-wrapper">
-              <span className="product-name">speakers</span>
-              <button className="shop-button">
-                <span className="shop-text">shop</span>
-                {/* //icon goes here */}
-              </button>
-            </div>
-          </div>
-          <div className="speakers-inner-wrapper"></div>
-        </div>
+        {speakers()}
         {earphones()}
       </div>
     </>
