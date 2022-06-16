@@ -3,13 +3,24 @@ import PropTypes from "prop-types";
 
 import Productslist from "components/ProductsList/ProductsList";
 
-function Navbar(props) {
+function Navbar({ sethideMobileProducts, hideMobileProducts }) {
+  const hideMobileProductsMenu = () => {
+    if (hideMobileProducts) {
+      sethideMobileProducts(false);
+    } else {
+      sethideMobileProducts(true);
+    }
+  };
+
   return (
     <>
       <header className="header-container">
         <nav class="navigation-main-container">
           <div className="icon-logo-group">
-            <div className="hamburger-menu">
+            <div
+              onClick={() => hideMobileProductsMenu()}
+              className="hamburger-menu"
+            >
               <div class="first bar"></div>
               <div class="second bar"></div>
               <div class="third bar"></div>
@@ -30,9 +41,10 @@ function Navbar(props) {
             </svg>
           </div>
         </nav>
-
-        {/* Product list  */}
-        <Productslist />
+        {hideMobileProducts ? null : (
+          /* Product list  */
+          <Productslist />
+        )}
       </header>
     </>
   );
