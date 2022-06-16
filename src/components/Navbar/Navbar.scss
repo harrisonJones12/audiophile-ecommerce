@@ -4,11 +4,10 @@
   width: 100%;
 }
 .navigation-main-container {
-  background-color: $black;
   width: 100vw;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   color: $white-main;
   z-index: 1;
   position: relative;
@@ -18,8 +17,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 32px;
     margin-bottom: 32px;
+    background-color: black;
+    height: 90px;
+    //TODO these values might change
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .hamburger-menu {

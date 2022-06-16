@@ -40,11 +40,11 @@ function Navbar({ sethideMobileProducts, hideMobileProducts }) {
               />
             </svg>
           </div>
+          {hideMobileProducts ? null : (
+            /* Product list  */
+            <Productslist />
+          )}
         </nav>
-        {hideMobileProducts ? null : (
-          /* Product list  */
-          <Productslist />
-        )}
       </header>
     </>
   );
