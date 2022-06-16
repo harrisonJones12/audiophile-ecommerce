@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
 
 import Navbar from "components/Navbar/Navbar";
 
-function Home(props) {
+function Home() {
   const [hideMobileProducts, sethideMobileProducts] = useState(false);
-
-  // useEffect(() => {
-  //   sethideMobileProducts(false);
-  // }, [hideMobileProducts]);
 
   return (
     <div className="Home-container">
