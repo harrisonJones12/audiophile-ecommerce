@@ -37,4 +37,10 @@
       background-color: $white-main;
     }
   }
+  @media (min-width: 1366px) {
+    .hamburger-menu {
+      display: none;
+    }
+  }
 }
+

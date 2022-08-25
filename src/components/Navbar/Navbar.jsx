@@ -1,15 +1,31 @@
-import React from "react";
+import React, {useEffect} from "react";
 import PropTypes from "prop-types";
 
 import Productslist from "components/ProductsList/ProductsList";
 
 function Navbar({ sethideMobileProducts, hideMobileProducts }) {
+
+ useEffect(() => {
+  window.addEventListener("resize", handleResize);
+ }, [])
+
+  const handleResize = () => {
+      
+    if (window.innerWidth >= 1366) {
+      sethideMobileProducts(true)
+    } else {
+      sethideMobileProducts(false);
+    }
+  }
+
   const hideMobileProductsMenu = () => {
+
     if (hideMobileProducts) {
       sethideMobileProducts(false);
     } else {
       sethideMobileProducts(true);
     }
+
   };
 
   return (

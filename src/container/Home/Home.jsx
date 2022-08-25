@@ -13,7 +13,6 @@ function Home() {
       />
       {hideMobileProducts ? null : (
         <div className="overlay">
-          <p>yizzzo</p>
         </div>
       )}
     </div>
