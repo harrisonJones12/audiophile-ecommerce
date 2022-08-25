@@ -3,7 +3,7 @@ import headphonesLogo from "components/ProductsList/assets/image-category-thumbn
 import speakerLogo from "components/ProductsList/assets/image-category-thumbnail-speakers.png";
 import earphonesLogo from "components/ProductsList/assets/image-category-thumbnail-earphones.png";
 
-function Productslist() {
+function Productslist({isDesktop}) {
   //earphones JSX
   const earphones = () => {
     return (
@@ -115,14 +115,33 @@ function Productslist() {
       </div>
     );
   };
+  
+// function that wil render mobile nav menu based on screen width
+  const renderMobileProductList = () => {
 
-  return (
-    <>
-      <div className="products-container">
+    if (isDesktop) {
+      return(<ul>
+        <li>Home</li>
+        <li>Heaphones</li>
+        <li>Speakers</li>
+        <li>Earphones</li>
+      </ul>)
+      
+    } else {
+
+      return(
+        <div className="products-container">
         {headphones()}
         {speakers()}
         {earphones()}
       </div>
+      )
+    }
+  }
+
+  return (
+    <>
+     {renderMobileProductList()} 
     </>
   );
 }
