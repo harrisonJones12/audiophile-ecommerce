@@ -1,0 +1,118 @@
+.products-container {
+  height: 750px;
+  position: relative;
+  align-self: center;
+  color: black;
+
+  .headphones-outer-wrapper,
+  .speakers-outer-wrapper,
+  .earphones-outer-wrapper {
+    height: 217px;
+    width: 327px;
+    margin: 0 24px 0 24px;
+    .headphones-inner-wrapper,
+    .speakers-inner-wrapper,
+    .earphones-inner-wrapper {
+      background: #f1f1f1;
+      border-radius: 8px;
+      height: 165px;
+
+      .product-name {
+        margin-bottom: 17px;
+      }
+    }
+  }
+  .earphones-outer-wrapper {
+    margin: 10px 24px 0 24px;
+  }
+  .headphones-outer-wrapper {
+    margin-top: 24px;
+  }
+
+  .product-name-button-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headphones-logo {
+    height: 104px;
+    width: 103px;
+  }
+
+  .earphones-middle-wrapper,
+  .headphones-middle-wrapper,
+  .speakers-middle-wrapper {
+    position: absolute;
+    height: fit-content;
+    margin: -32px auto 0 auto;
+    width: 200px;
+    left: 90px;
+  }
+  .icon-right {
+    margin-left: 60px;
+  }
+}
+
+.shop-button {
+  width: 52px;
+  align-self: center;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.product-name,
+.shop-text {
+  font-family: "Manrope";
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.shop-text {
+  position: relative;
+  font-size: 13px;
+  top: 17px;
+  opacity: 0.5;
+}
+
+.shop-text:hover {
+  color: #fbaf85;
+  opacity: 1;
+}
+
+.product-name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1.07143px;
+}
+
+.desktop-menu-items {
+  display: flex;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .products-container {
+    .earphones-middle-wrapper,
+    .headphones-middle-wrapper,
+    .speakers-middle-wrapper {
+      position: relative;
+      left: 0;
+      top: 125px;
+    }
+    display: flex;
+    flex-direction: row;
+    width: 768px;
+
+    .earphones-outer-wrapper {
+      margin: 0;
+    }
+    .headphones-outer-wrapper {
+      margin-top: 0;
+    }
+  }
+}
