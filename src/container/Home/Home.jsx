@@ -5,39 +5,48 @@ import Productslist from "components/ProductsList/ProductsList";
 
 function Home() {
   const [hideMobileProducts, sethideMobileProducts] = useState(true);
-  const [isDesktop, setisDesktop] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-   }, [])
+  }, [])
+  /** 
+  checks if screen is desktop width, 
+  this is needed to render the desktopNavItems in the <NavBar /> Component
+   */
+  useEffect(() => {
+    if (window.innerWidth >= 1366) {
+      setIsDesktop(true)
+    }
+  }, [])
 
-   //resets mobile navigation state
-   useEffect(() => {
+  //resets mobile navigation state  
+  useEffect(() => {
     sethideMobileProducts(true);
-   }, [isDesktop])
-  
-    const handleResize = () => {
-        
-      if (window.innerWidth >= 1366) {
-        setisDesktop(true)
-      } else {
-        setisDesktop(false);
-      }
+  }, [isDesktop])
+
+  const handleResize = () => {
+
+    if (window.innerWidth >= 1366) {
+      setIsDesktop(true)
+    } else {
+      setIsDesktop(false);
+    }
+  }
+
+  const hideMobileProductsMenu = () => {
+
+    if (hideMobileProducts) {
+      sethideMobileProducts(false);
+    } else {
+      sethideMobileProducts(true);
     }
 
-    const hideMobileProductsMenu = () => {
-
-      if (hideMobileProducts) {
-        sethideMobileProducts(false);
-      } else {
-        sethideMobileProducts(true);
-      }
-  
-    };
+  };
 
   return (
     <div className="Home-container">
-      <Navbar hideMobileProductsMenu={hideMobileProductsMenu} hideMobileProducts={hideMobileProducts} isDesktop={isDesktop} Productslist={<Productslist isDesktop={isDesktop} />} />
+      <Navbar hideMobileProductsMenu={hideMobileProductsMenu} hideMobileProducts={hideMobileProducts} isDesktop={isDesktop} />
       {hideMobileProducts || isDesktop ? null : (
         <div className="overlay">
         </div>

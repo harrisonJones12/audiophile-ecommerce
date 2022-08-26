@@ -90,6 +90,11 @@
   letter-spacing: 1.07143px;
 }
 
+.desktop-menu-items {
+  display: flex;
+  color: black;
+}
+
 @media (min-width: 768px) {
   .products-container {
     .earphones-middle-wrapper,

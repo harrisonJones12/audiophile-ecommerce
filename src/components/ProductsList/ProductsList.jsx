@@ -3,7 +3,7 @@ import headphonesLogo from "components/ProductsList/assets/image-category-thumbn
 import speakerLogo from "components/ProductsList/assets/image-category-thumbnail-speakers.png";
 import earphonesLogo from "components/ProductsList/assets/image-category-thumbnail-earphones.png";
 
-function Productslist({isDesktop}) {
+function Productslist() {
   //earphones JSX
   const earphones = () => {
     return (
@@ -117,31 +117,37 @@ function Productslist({isDesktop}) {
   };
   
 // function that wil render mobile nav menu based on screen width
-  const renderMobileProductList = () => {
+  // const renderMobileProductList = () => {
 
-    if (isDesktop) {
-      return(<ul>
-        <li>Home</li>
-        <li>Heaphones</li>
-        <li>Speakers</li>
-        <li>Earphones</li>
-      </ul>)
-      
-    } else {
+  //   if (isDesktop) {
+  //     return(
+  //     <ul className="desktop-menu-items">
+  //       <li className="home">Home</li>
+  //       <li className="heaphones">Heaphones</li>
+  //       <li className="speakers">Speakers</li>
+  //       <li className="earphones">Earphones</li>
+  //     </ul>
+  //     )
 
-      return(
-        <div className="products-container">
+  //   } else {
+
+  //     return(
+  //       <div className="products-container">
+  //       {headphones()}
+  //       {speakers()}
+  //       {earphones()}
+  //     </div>
+  //     )
+  //   }
+  // }
+
+  return (
+    <>
+     <div className="products-container">
         {headphones()}
         {speakers()}
         {earphones()}
       </div>
-      )
-    }
-  }
-
-  return (
-    <>
-     {renderMobileProductList()} 
     </>
   );
 }
