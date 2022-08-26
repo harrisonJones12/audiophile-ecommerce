@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import Navbar from "components/Navbar/Navbar";
-import Productslist from "components/ProductsList/ProductsList";
 
 function Home() {
   const [hideMobileProducts, sethideMobileProducts] = useState(true);
