@@ -115,8 +115,8 @@ function Productslist() {
       </div>
     );
   };
-  
-// function that wil render mobile nav menu based on screen width
+
+  // function that wil render mobile nav menu based on screen width
   // const renderMobileProductList = () => {
 
   //   if (isDesktop) {
@@ -143,7 +143,7 @@ function Productslist() {
 
   return (
     <>
-     <div className="products-container">
+      <div className="products-container" data-testid="products-list">
         {headphones()}
         {speakers()}
         {earphones()}

@@ -44,7 +44,7 @@ function Home() {
   };
 
   return (
-    <div className="Home-container">
+    <div className="Home-container" data-testid="home-container">
       <Navbar hideMobileProductsMenu={hideMobileProductsMenu} hideMobileProducts={hideMobileProducts} isDesktop={isDesktop} />
       {hideMobileProducts || isDesktop ? null : (
         <div className="overlay">
