@@ -12,4 +12,15 @@ describe('<Navbar />', () => {
     const audiophileLogo = screen.getByTestId('audiophile-logo');
     expect(audiophileLogo).toBeInTheDocument();
   });
+
+  it('should load navbar with desktop nav items', () => {
+    const audiophileLogo = screen.getByText('Home');
+    expect(audiophileLogo).toBeInTheDocument();
+  });
+
+  it.only('should load navbar without desktop nav items', () => {
+    render(<Navbar hideMobileProductsMenu={hideMobileProductsMenuMock} hideMobileProducts isDesktop={false} />)
+    const audiophileLogo = screen.getByText('Home');
+    expect(audiophileLogo).toBeInTheDocument();
+  });
 })
