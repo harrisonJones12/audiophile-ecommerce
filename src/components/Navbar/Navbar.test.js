@@ -18,7 +18,7 @@ describe('<Navbar />', () => {
     expect(audiophileLogo).toBeInTheDocument();
   });
 
-  it.only('should load navbar without desktop nav items', () => {
+  it('should load navbar without desktop nav items', () => {
     render(<Navbar hideMobileProductsMenu={hideMobileProductsMenuMock} hideMobileProducts isDesktop={false} />)
     const audiophileLogo = screen.getByText('Home');
     expect(audiophileLogo).toBeInTheDocument();
