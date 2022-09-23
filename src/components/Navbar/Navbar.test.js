@@ -12,7 +12,7 @@ describe('<Navbar />', () => {
     const audiophileLogo = screen.getByTestId('audiophile-logo');
     expect(audiophileLogo).toBeInTheDocument();
   });
-  //TODO use data-testid if needed
+  //TODO figure out if data-testid is needed
   it('should load navbar with desktop nav items', () => {
     render(<Navbar hideMobileProductsMenu={hideMobileProductsMenuMock} hideMobileProducts isDesktop />)
     const homeDesktopLink = screen.getByText('Home');
