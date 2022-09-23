@@ -5,22 +5,23 @@ import Navbar from './Navbar'
 describe('<Navbar />', () => {
 
   const hideMobileProductsMenuMock = jest.fn();
+  const { rerender } = render(<Navbar hideMobileProductsMenu={hideMobileProductsMenuMock} hideMobileProducts isDesktop />)
 
-  render(<Navbar hideMobileProductsMenu={hideMobileProductsMenuMock} hideMobileProducts isDesktop />)
 
   it('should load navbar with logo', () => {
     const audiophileLogo = screen.getByTestId('audiophile-logo');
     expect(audiophileLogo).toBeInTheDocument();
   });
-
+  //TODO use data-testid if needed
   it('should load navbar with desktop nav items', () => {
-    const audiophileLogo = screen.getByText('Home');
-    expect(audiophileLogo).toBeInTheDocument();
+    render(<Navbar hideMobileProductsMenu={hideMobileProductsMenuMock} hideMobileProducts isDesktop />)
+    const homeDesktopLink = screen.getByText('Home');
+    expect(homeDesktopLink).toBeInTheDocument();
   });
 
   it('should load navbar without desktop nav items', () => {
-    render(<Navbar hideMobileProductsMenu={hideMobileProductsMenuMock} hideMobileProducts isDesktop={false} />)
-    const audiophileLogo = screen.getByText('Home');
-    expect(audiophileLogo).toBeInTheDocument();
+    rerender(<Navbar hideMobileProductsMenu={hideMobileProductsMenuMock} hideMobileProducts isDesktop={false} />)
+    const audiophileLogo = screen.queryByText('Home');
+    expect(audiophileLogo).not.toBeInTheDocument();
   });
 })
