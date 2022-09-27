@@ -24,10 +24,25 @@
     //TODO these values might change
     padding-left: 20px;
     padding-right: 20px;
+
+    .audiophile-logo {
+      cursor: pointer;
+    }
+
+    .shopping-cart {
+      fill: $white-main;
+      cursor: pointer;
+    }
+
+    .shopping-cart:hover {
+      fill: #fbaf85;
+
+    }
   }
 
   .hamburger-menu {
     display: block;
+    cursor: pointer;
 
     .second {
       margin: 5px 0 5px 0;
@@ -39,6 +54,8 @@
       background-color: $white-main;
     }
   }
+
+
 
   .inner-site-menu-wrapper {
     display: flex;
@@ -80,5 +97,17 @@
       padding-left: 200px;
       padding-right: 200px;
     }
+  }
+}
+
+.desktop-menu-items {
+
+  .home:hover,
+  .headphones:hover,
+  .speakers:hover,
+  .earphones:hover {
+    color: #fbaf85;
+    opacity: 1;
+    cursor: pointer;
   }
 }
