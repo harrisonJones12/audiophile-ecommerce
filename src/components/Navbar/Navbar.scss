@@ -40,6 +40,21 @@
     }
   }
 
+  .inner-site-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 245px;
+    align-items: center;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    .inner-site-menu-wrapper {
+      width: 200px;
+
+    }
+  }
+
   @media (min-width: 1366px) {
     .hamburger-menu {
       display: none;

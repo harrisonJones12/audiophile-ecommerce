@@ -9,35 +9,30 @@ function Productslist() {
     return (
       <div className="earphones-outer-wrapper">
         {/* //Product logo goes here */}
-        <div className="earphones-middle-wrapper">
-          <img
-            src={earphonesLogo}
-            className="headphones-logo"
-            alt="headphones"
-          />
-          <div className="product-name-button-wrapper">
-            <span className="product-name">earphones</span>
-            <button className="shop-button">
-              <span className="shop-text">shop</span>
-              <svg
-                className="icon-right"
-                width="8"
-                height="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.322 1l5 5-5 5"
-                  stroke="#D87D4A"
-                  strokeWidth="2"
-                  fill="none"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div className="earphones-inner-wrapper">
-          {/* //this is here so that we can have background that is not the full height of the outter container */}
+        <img
+          src={earphonesLogo}
+          className="headphones-logo"
+          alt="headphones"
+        />
+        <div className="product-name-button-wrapper">
+          <span className="product-name">earphones</span>
+          <button className="shop-button">
+            <span className="shop-text">shop</span>
+            <svg
+              className="icon-right"
+              width="8"
+              height="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.322 1l5 5-5 5"
+                stroke="#D87D4A"
+                strokeWidth="2"
+                fill="none"
+                fillRule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     );
@@ -48,35 +43,32 @@ function Productslist() {
     return (
       <div className="headphones-outer-wrapper">
         {/* //this is here so that we can have background that is not the full height of the outter container */}
-        <div className="headphones-middle-wrapper">
-          {/* //Product logo goes here */}
-          <img
-            src={headphonesLogo}
-            className="headphones-logo"
-            alt="headphones"
-          />{" "}
-          <div className="product-name-button-wrapper">
-            <span className="product-name">headphones</span>
-            <button className="shop-button">
-              <span className="shop-text">shop</span>
-              <svg
-                className="icon-right"
-                width="8"
-                height="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.322 1l5 5-5 5"
-                  stroke="#D87D4A"
-                  strokeWidth="2"
-                  fill="none"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
+        {/* //Product logo goes here */}
+        <img
+          src={headphonesLogo}
+          className="headphones-logo"
+          alt="headphones"
+        />{" "}
+        <div className="product-name-button-wrapper">
+          <span className="product-name">headphones</span>
+          <button className="shop-button">
+            <span className="shop-text">shop</span>
+            <svg
+              className="icon-right"
+              width="8"
+              height="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.322 1l5 5-5 5"
+                stroke="#D87D4A"
+                strokeWidth="2"
+                fill="none"
+                fillRule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
-        <div className="headphones-inner-wrapper"></div>
       </div>
     );
   };
@@ -85,33 +77,30 @@ function Productslist() {
   const speakers = () => {
     return (
       <div className="speakers-outer-wrapper">
-        <div className="speakers-middle-wrapper">
-          {/* //Product logo goes here */}
-          <img src={speakerLogo} className="headphones-logo" alt="headphones" />
+        {/* //Product logo goes here */}
+        <img src={speakerLogo} className="headphones-logo" alt="headphones" />
 
-          {/* //this is here so that we can have background that is not the full height of the outter container */}
-          <div className="product-name-button-wrapper">
-            <span className="product-name">speakers</span>
-            <button className="shop-button">
-              <span className="shop-text">shop</span>
-              <svg
-                className="icon-right"
-                width="8"
-                height="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.322 1l5 5-5 5"
-                  stroke="#D87D4A"
-                  strokeWidth="2"
-                  fill="none"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
+        {/* //this is here so that we can have background that is not the full height of the outter container */}
+        <div className="product-name-button-wrapper">
+          <span className="product-name">speakers</span>
+          <button className="shop-button">
+            <span className="shop-text">shop</span>
+            <svg
+              className="icon-right"
+              width="8"
+              height="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.322 1l5 5-5 5"
+                stroke="#D87D4A"
+                strokeWidth="2"
+                fill="none"
+                fillRule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
-        <div className="speakers-inner-wrapper"></div>
       </div>
     );
   };
