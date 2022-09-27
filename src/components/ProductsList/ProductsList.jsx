@@ -11,8 +11,8 @@ function Productslist() {
         {/* //Product logo goes here */}
         <img
           src={earphonesLogo}
-          className="headphones-logo"
-          alt="headphones"
+          className="earphones-logo"
+          alt="earphones"
         />
         <div className="product-name-button-wrapper">
           <span className="product-name">earphones</span>
@@ -78,7 +78,7 @@ function Productslist() {
     return (
       <div className="speakers-outer-wrapper">
         {/* //Product logo goes here */}
-        <img src={speakerLogo} className="headphones-logo" alt="headphones" />
+        <img src={speakerLogo} className="speakers-logo" alt="speakers" />
 
         {/* //this is here so that we can have background that is not the full height of the outter container */}
         <div className="product-name-button-wrapper">
