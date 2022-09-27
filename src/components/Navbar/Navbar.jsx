@@ -38,7 +38,7 @@ function Navbar({ hideMobileProductsMenu, hideMobileProducts, isDesktop }) {
               </svg>
             </div>
             {isDesktop ? desktopNavItems : null}
-            {/* this needs to be changed when adding in react router */}
+            {/*TODO this needs to be changed when adding in react router */}
             <div className="shopping-cart">
               <svg width="23" height="20" xmlns="http://www.w3.org/2000/svg" alt="shopping-cart">
                 <path
