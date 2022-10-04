@@ -1,12 +1,14 @@
 import { AnyAction } from 'redux';
 
 interface ShopState {
-    fetchResponse: object;
+    products: object,
+    cart: object
 }
 
 
 const initialState: ShopState = {
-    fetchResponse: {}
+    products: {},
+    cart: {}
 };
 
 //TODO change action names 
@@ -16,10 +18,10 @@ export default function reducer(
 ) {
     switch (action.type) {
         case "ACTION1":
-        case "ACTION1":
-            return { ...state, loading: true };
-        case "ACTION2":
-            return { ...state, loading: false, post: action.json, showModal: true };
+        case "GETPRODUCTSINSTOCK":
+            return { ...state, products: { productsInstock: action.products } };
+        case "ADDITEMTOCART":
+            return { ...state, cart: {} };
         case "ACTION3":
             return { ...state, showModal: false };
         case "ACTION4":
