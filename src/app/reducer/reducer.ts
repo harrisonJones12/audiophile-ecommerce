@@ -9,20 +9,20 @@ const initialState: ShopState = {
     fetchResponse: {}
 };
 
-
+//TODO change action names 
 export default function reducer(
     state = initialState,
     action: AnyAction
 ) {
     switch (action.type) {
-        case "MAKE_POST":
-        case "FETCH_POST":
+        case "ACTION1":
+        case "ACTION1":
             return { ...state, loading: true };
-        case "POST_MADE":
+        case "ACTION2":
             return { ...state, loading: false, post: action.json, showModal: true };
-        case "MODAL_CLOSE":
+        case "ACTION3":
             return { ...state, showModal: false };
-        case "FETCH_SUCCESSFUL":
+        case "ACTION4":
             return { ...state, loading: false, fetchResponse: action.jsonFetch };
         default:
             return state;
