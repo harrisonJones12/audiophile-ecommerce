@@ -3,13 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+//redux
 import { Provider } from "react-redux";
-
-
 import { configureStore } from "@reduxjs/toolkit";
-
 import createSagaMiddleware from "redux-saga";
 
+//react-router
+import { BrowserRouter } from "react-router-dom";
+
+//sagas and reducer
 import { helloSaga } from "app/sagas/sagas.js";
 import reducer from "app/reducer/reducer.ts";
 
@@ -21,10 +24,14 @@ const store = configureStore({
 
 sagaMiddleWare.run(helloSaga);
 
+
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
