@@ -21,6 +21,7 @@ html {
 $black: #000;
 $black-secondary: #101010;
 $white-main: #fff;
+$main-background-offwhite: #F2F2F2;
 $white-secondary: #f1f1f1;
 $orange: #d87d4a;
 $orange-lighter: #fbaf85;
@@ -28,3 +29,5 @@ $orange-lighter: #fbaf85;
 @import "components/Navbar/Navbar.scss";
 @import "components/ProductsList/ProductsList.scss";
 @import "container/Home/Home.scss";
+@import "container/Cart/Cart.scss";
+@import "components/InputField/InputField.scss"
