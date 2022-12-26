@@ -1,8 +1,21 @@
 .input-label-group {
-    // TODO change or remove height later
-    height: 400px;
+    //layout
+    display: flex;
+    flex-direction: column;
 
-    // .text-label {
-    //     display: block;
-    // }
+    .text-label {
+        align-self: start;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .text-input {
+        width: 280px;
+        width: 280px;
+        height: 50px;
+        margin-top: 10px;
+        border: $light-grey solid 1px;
+        border-radius: 8px;
+    }
+
 }
