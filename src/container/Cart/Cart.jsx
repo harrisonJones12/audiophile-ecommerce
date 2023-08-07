@@ -5,8 +5,16 @@ const billingDetailsLabels = ["Name", "Email Address", "Phone Number"];
 
 const shippingInfoLabels = ["Your Address", "ZIP Code", "City", "Country"];
 
+const paymentDetailsLabels = ["Payment Method", "ZIP Code", "City", "Country"];
+
+const testObject = {
+    billingDetailsLabels,
+    shippingInfoLabels,
+    paymentDetailsLabels
+};
+
 const renderBillingDetailInputFields =
-    billingDetailsLabels.map((billingDetailsLabel, index) => {
+    testObject.billingDetailsLabels.map((billingDetailsLabel, index) => {
         console.log('billingDetailsLabel', billingDetailsLabel)
         return (
             <li className="billing-details-input-list-item">
@@ -15,6 +23,25 @@ const renderBillingDetailInputFields =
         )
     });
 
+const renderShippingInfoInputFields =
+    testObject.shippingInfoLabels.map((shippingInfoLabel, index) => {
+        console.log('shippingInfoLabels', shippingInfoLabels)
+        return (
+            <li className="billing-details-input-list-item">
+                <InputField labelText={shippingInfoLabel} id={shippingInfoLabel} />
+            </li>
+        )
+    });
+
+const renderPaymentDetailsInputFields =
+    testObject.billingDetailsLabels.map((paymentDetailLabel, index) => {
+        console.log('billingDetailsLabel', paymentDetailLabel)
+        return (
+            <li className="billing-details-input-list-item">
+                <InputField labelText={paymentDetailLabel} id={paymentDetailLabel} />
+            </li>
+        )
+    });
 
 export default function Cart() {
     return (
@@ -29,6 +56,8 @@ export default function Cart() {
                     <form className="billing-details-form">
                         <ul className="billing-details-input-list">
                             {renderBillingDetailInputFields}
+                            {renderShippingInfoInputFields}
+                            {renderPaymentDetailsInputFields}
                         </ul>
                     </form>
                 </div>

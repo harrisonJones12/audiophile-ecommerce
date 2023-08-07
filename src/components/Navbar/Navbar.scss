@@ -109,4 +109,13 @@
     opacity: 1;
     cursor: pointer;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: white;
+  }
 }
