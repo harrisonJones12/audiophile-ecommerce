@@ -52,13 +52,18 @@ export default function Cart() {
             <div className="checkout-container">
                 <h1 className="checkout-heading">Checkout</h1>
                 <div className="billing-details-container">
-                    <h2 className="billing-details-text">Billing Details</h2>
                     <form className="billing-details-form">
+                        <h2 className="billing-details-text">Billing Details</h2>
                         <ul className="billing-details-input-list">
                             {renderBillingDetailInputFields}
-                            {renderShippingInfoInputFields}
-                            {renderPaymentDetailsInputFields}
                         </ul>
+
+                        <div className="shipping-details-list-container">
+                            <h2 className="billing-details-text">Shipping Details</h2>
+                            <ul className="shipping-details-input-list">{renderShippingInfoInputFields}</ul>
+                        </div>
+                        <h2 className="billing-details-text">Payment Details</h2>
+                        <ul className="payment-details-input-list">{renderPaymentDetailsInputFields}</ul>
                     </form>
                 </div>
             </div>

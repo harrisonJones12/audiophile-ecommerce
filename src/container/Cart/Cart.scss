@@ -48,11 +48,19 @@
         }
 
         .billing-details-form {
-            .billing-details-input-list {
+
+            .billing-details-input-list,
+            .shipping-details-input-list,
+            .payment-details-input-list {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 280px;
+
+            }
+
+            .shipping-details-list-container {
+                position: relative;
+                margin: 20px 0 20px 0;
             }
         }
     }
