@@ -7,8 +7,10 @@ export default function Button(props) {
     const radioButton = (
         <fieldset>
             <div className="radio-button-container">
-                <label className={`${props.label} radio-label`}> {props.text}</label>
-                <input className={`${props.label} radio-button`} type="radio" id={props.id} name={props.name} />
+                <div className="radio-button-inner-container">
+                    <input className={`${props.label} radio-button`} type="radio" id={props.id} name={props.name} />
+                    <label className={`${props.label} radio-label`} for={props.id}> {props.text}</label>
+                </div>
             </div>
         </fieldset>
     );

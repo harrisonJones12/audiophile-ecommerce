@@ -31,14 +31,7 @@
             text-transform: uppercase;
         }
 
-        .billing-details-text {
-            color: $orange;
-            font-weight: 700;
-            font-size: 12px;
-            margin-bottom: 16px;
-            height: 25px;
-            line-height: 25px;
-        }
+
 
         .checkout-heading {
             margin: 20px 0 30px 0;
@@ -49,9 +42,44 @@
 
         .billing-details-form {
 
-            .billing-details-input-list,
-            .shipping-details-input-list,
+
+            .billing-details-container,
+            .shipping-details-list-container,
+            .payment-details-container {
+                display: flex;
+                flex-direction: column;
+
+                .billing-details-subheading,
+                .shipping-details-subheading,
+                .payment-details-subheading {
+                    color: $orange;
+                    font-weight: 700;
+                    font-size: 14px;
+                    margin-bottom: 16px;
+                    height: 25px;
+                    line-height: 25px;
+                    align-self: flex-start;
+                }
+
+                .billing-details-input-list,
+                .shipping-details-input-list,
+
+                {
+                display: flex;
+                flex-direction: column;
+                height: 350px;
+                justify-content: space-between;
+            }
+
+            .payment-details-radio-button-list {
+                height: 130px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
             .payment-details-input-list {
+                height: 180px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -62,6 +90,13 @@
                 position: relative;
                 margin: 20px 0 20px 0;
             }
+
+            .payment-details-radio-button-list {
+                margin-bottom: 32px;
+            }
         }
+
+
     }
+}
 }

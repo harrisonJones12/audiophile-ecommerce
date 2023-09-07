@@ -8,10 +8,13 @@ const shippingInfoLabels = ["Your Address", "ZIP Code", "City", "Country"];
 
 const paymentDetailsLabels = ["e-Money Number", "e-Money PIN"];
 
+const paymentTypesLabels = ["e-Money", "Cash on delivery"];
+
 const testObject = {
     billingDetailsLabels,
     shippingInfoLabels,
-    paymentDetailsLabels
+    paymentDetailsLabels,
+    paymentTypesLabels
 };
 
 const renderBillingDetailInputFields =
@@ -46,7 +49,7 @@ const renderPaymentDetailsInputFields =
 
 
 const renderPaymentDetailsInputRadioButtons =
-    testObject.paymentDetailsLabels.map((paymentDetailLabel, index) => {
+    testObject.paymentTypesLabels.map((paymentDetailLabel, index) => {
         console.log('billingDetailsLabel', paymentDetailLabel)
         return (
             <li className="billing-details-input-list-item">
@@ -63,28 +66,29 @@ export default function Cart() {
             </span>
             <div className="checkout-container">
                 <h1 className="checkout-heading">Checkout</h1>
-                <div className="billing-details-container">
-                    <form className="billing-details-form">
-                        <h2 className="billing-details-text">Billing Details</h2>
+
+                <form className="billing-details-form">
+                    <div className="billing-details-container">
+                        <h2 className="billing-details-subheading">Billing Details</h2>
                         <ul className="billing-details-input-list">
                             {renderBillingDetailInputFields}
                         </ul>
+                    </div>
+                    <div className="shipping-details-list-container">
+                        <h2 className="shipping-details-subheading">Shipping Details</h2>
+                        <ul className="shipping-details-input-list">{renderShippingInfoInputFields}</ul>
+                    </div>
+                    <div className="payment-details-container">
+                        <h2 className="payment-details-subheading">Payment Details</h2>
+                        <ul className="payment-details-radio-button-list">{renderPaymentDetailsInputRadioButtons}</ul>
+                        <div className="payment-details-input-field-container">
+                            <ul className="payment-details-input-list"> {renderPaymentDetailsInputFields}</ul>
 
-                        <div className="shipping-details-list-container">
-                            <h2 className="billing-details-text">Shipping Details</h2>
-                            <ul className="shipping-details-input-list">{renderShippingInfoInputFields}</ul>
                         </div>
-                        <div className="payment-details-container">
-                            <h2 className="billing-details-text">Payment Details</h2>
-                            <ul className="payment-details-input-list">{renderPaymentDetailsInputRadioButtons}</ul>
-                            <div className="payment-details-input-field-container">
-                                <ul className="shipping-details-input-list"> {renderPaymentDetailsInputFields}</ul>
-
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
+
     )
 }
