@@ -49,6 +49,7 @@
                 display: flex;
                 flex-direction: column;
 
+
                 .billing-details-subheading,
                 .shipping-details-subheading,
                 .payment-details-subheading {
@@ -63,40 +64,46 @@
 
                 .billing-details-input-list,
                 .shipping-details-input-list,
+                .payment-details-radio-button-list,
+                .payment-details-input-list {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
 
-                {
-                display: flex;
-                flex-direction: column;
-                height: 350px;
-                justify-content: space-between;
+                }
+
+                .billing-details-input-list {
+                    height: 285px;
+                }
+
+                .shipping-details-input-list {
+                    height: 380px;
+                }
+
+                .payment-details-radio-button-list {
+                    height: 130px;
+
+                }
+
+                .payment-details-input-list {
+                    height: 180px;
+                }
+
+                .shipping-details-list-container {
+                    position: relative;
+                    margin: 20px 0 20px 0;
+                }
+
+                .payment-details-radio-button-list {
+                    margin-bottom: 40px;
+                }
             }
 
-            .payment-details-radio-button-list {
-                height: 130px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+            .shipping-details-list-container,
+            .payment-details-container {
+                margin-top: 40px;
             }
 
-            .payment-details-input-list {
-                height: 180px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-            }
-
-            .shipping-details-list-container {
-                position: relative;
-                margin: 20px 0 20px 0;
-            }
-
-            .payment-details-radio-button-list {
-                margin-bottom: 32px;
-            }
         }
-
-
     }
-}
 }
