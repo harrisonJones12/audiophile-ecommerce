@@ -1,0 +1,38 @@
+.main-container {
+    text-decoration: none;
+
+    .radio-button-container {
+        background: white;
+        border-radius: 8px;
+        border: $light-grey solid 1px;
+        height: 56px;
+        display: flex;
+        justify-content: start;
+        //aklignment styles
+
+        .radio-label {
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 16px;
+        }
+
+        .radio-button {
+            height: 20px;
+            width: 20px;
+            margin-right: 16px;
+            accent-color: #D87D4A;
+        }
+
+        .radio-button-inner-container {
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+
+        }
+
+    }
+
+    .radio-button-container:hover {
+        border: #D87D4A solid 1px;
+    }
+}

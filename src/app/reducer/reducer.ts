@@ -19,7 +19,7 @@ export default function reducer(
     switch (action.type) {
         case "ACTION1":
         case "GETPRODUCTSINSTOCK":
-            return { ...state, products: { productsInstock: action.products } };
+            return { ...state, products: { productsInstock: action.payload } };
         case "ADDITEMTOCART":
             return { ...state, cart: {} };
         case "ACTION3":

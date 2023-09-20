@@ -1,0 +1,113 @@
+.main-cart-container {
+    display: flex;
+    flex-direction: column;
+
+    .go-back-text {
+        font-size: 16px;
+        height: 20px;
+        align-self: flex-start;
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+
+    .checkout-container {
+        margin-top: 60px;
+        width: 327px;
+        align-self: center;
+        background: $white-main;
+
+        //padding and positioning rules
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+        // padding: 20px 20px 20px 30px;
+        //rule to add more padding
+        padding: 20px 20px 30px 20px;
+        border-radius: 8px;
+
+        .billing-details-text,
+        .checkout-heading {
+            text-transform: uppercase;
+        }
+
+
+
+        .checkout-heading {
+            margin: 20px 0 30px 0;
+            font-size: 30px;
+            font-weight: 700;
+            align-self: flex-start;
+        }
+
+        .billing-details-form {
+
+
+            .billing-details-container,
+            .shipping-details-list-container,
+            .payment-details-container {
+                display: flex;
+                flex-direction: column;
+
+
+                .billing-details-subheading,
+                .shipping-details-subheading,
+                .payment-details-subheading {
+                    color: $orange;
+                    font-weight: 700;
+                    font-size: 14px;
+                    margin-bottom: 16px;
+                    height: 25px;
+                    line-height: 25px;
+                    align-self: flex-start;
+                }
+
+                .billing-details-input-list,
+                .shipping-details-input-list,
+                .payment-details-radio-button-list,
+                .payment-details-input-list {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                }
+
+                .billing-details-input-list {
+                    height: 285px;
+                }
+
+                .shipping-details-input-list {
+                    height: 380px;
+                }
+
+                .payment-details-radio-button-list {
+                    height: 130px;
+
+                }
+
+                .payment-details-input-list {
+                    height: 180px;
+                }
+
+                .shipping-details-list-container {
+                    position: relative;
+                    margin: 20px 0 20px 0;
+                }
+
+                .payment-details-radio-button-list {
+                    margin-bottom: 40px;
+                }
+            }
+
+            .shipping-details-list-container,
+            .payment-details-container {
+                margin-top: 40px;
+            }
+
+        }
+    }
+}
+
+// @media (min-width: 768px) {
+
+// }

@@ -1,0 +1,21 @@
+.input-label-group {
+    //layout
+    display: flex;
+    flex-direction: column;
+
+    .text-label {
+        align-self: flex-start;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .text-input {
+        width: 280px;
+        width: 280px;
+        height: 50px;
+        margin-top: 10px;
+        border: $light-grey solid 1px;
+        border-radius: 8px;
+    }
+
+}
