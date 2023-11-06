@@ -1,6 +1,7 @@
 
 import InputField from "components/InputField/InputField";
 import Button from "components/Button/Button";
+import CartSummary from "components/CartSummary/CartSummary"
 
 const billingDetailsLabels = ["Name", "Email Address", "Phone Number"];
 
@@ -88,6 +89,7 @@ export default function Cart() {
                     </div>
                 </form>
             </div>
+            <CartSummary />
         </div>
 
     )
