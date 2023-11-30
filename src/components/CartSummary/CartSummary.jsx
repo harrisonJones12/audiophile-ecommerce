@@ -42,16 +42,13 @@ export default function CartSummary(props) {
                     Summary
                 </h2>
                 <div className="cart-summary-product-calculations">
-                    <div className="container"><span></span></div>
-                    <div className="container"><span></span></div>
-                    <div className="container"><span></span></div>
-                    <div className="container"><span></span></div>
+                    {renderProductsSummary}
 
                     <button>
                         Continue & Pay
                     </button>
                 </div>
-                {renderProductsSummary}
+
             </div>
         </>
     )

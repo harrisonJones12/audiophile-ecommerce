@@ -2,6 +2,20 @@
     margin-top: 40px;
     background-color: $white-main;
     height: 490px;
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    align-self: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+
+    .cart-summary-heading {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        align-self: start;
+    }
 
     .product-quantity-container-wrapper {
         display: flex;
