@@ -34,8 +34,31 @@ export default function CartSummary(props) {
 
         });
 
+    // const calculateTotals = () => {
+    //     // 
+    // }
+
+    const fees = [{ feeName: 'Total', dollarAmount: '$64' }, { feeName: 'shipping', dollarAmount: '$54' }, { feeName: 'Vat (Included)', dollarAmount: '$54' }, { feeName: 'Grand Total', dollarAmount: '$94' }];
+
+
+
+    const checkoutFees = (
+        <div className="cart-calculations">
+            {fees.map((fee) => {
+                const useGrandTotalClassName = fee.feeName === 'Grand Total' ? 'grand-total' : null;
+                return (<>
+                    <div className={`${fee.feeName} individual-total-container`}>
+                        <span className={`${fee.feeName} feeName`}>{fee.feeName}</span>
+                        <span className={`${fee.feeName} amount ${useGrandTotalClassName}`}>{fee.dollarAmount}</span>
+                    </div>
+                </>)
+            })}
+        </div>
+    );
+
     return (
         <>
+
             <div className="cart-summary-main-container">
 
                 <h2 className="cart-summary-heading">
@@ -43,7 +66,8 @@ export default function CartSummary(props) {
                 </h2>
                 <div className="cart-summary-product-calculations">
                     {renderProductsSummary}
-
+                    <div className="total"></div>
+                    {checkoutFees}
                     <button>
                         Continue & Pay
                     </button>

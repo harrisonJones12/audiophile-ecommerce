@@ -56,4 +56,21 @@
         }
     }
 
+    .individual-total-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 280px;
+
+        .amount {
+            font-size: 18px;
+            font-family: Manrope;
+            font-weight: 700;
+        }
+
+        .grand-total {
+            color: #D87D4A;
+        }
+    }
+
 }
