@@ -68,7 +68,7 @@ export default function CartSummary(props) {
                     {renderProductsSummary}
                     <div className="total"></div>
                     {checkoutFees}
-                    <button>
+                    <button className="continue-and-pay-button">
                         Continue & Pay
                     </button>
                 </div>
