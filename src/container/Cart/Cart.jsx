@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 import InputField from "components/InputField/InputField";
 import Button from "components/Button/Button";
@@ -62,8 +63,15 @@ const renderPaymentDetailsInputRadioButtons =
 export default function Cart() {
     return (
         <div className="main-cart-container">
+            {/* This needs to be able to look at the 
+                history and route back to 
+                where the user came from */}
             <span className="go-back-text">
-                Go Back
+                <Link to="/">
+
+                    Go Back
+
+                </Link>
             </span>
             <div className="checkout-container">
                 <h1 className="checkout-heading">Checkout</h1>
