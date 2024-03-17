@@ -1,15 +1,26 @@
 import PropTypes from "prop-types";
 
+import CallToAction from "container/Home/CallToAction"
+
 function Home({ hideMobileProducts, isDesktop }) {
 
 
   return (
     <div className="Home-container" data-testid="home-container">
-      <p>Home</p>
+
       {hideMobileProducts || isDesktop ? null : (
         <div className="overlay">
         </div>
       )}
+
+      {/* Add home content here */}
+
+      <CallToAction />
+
+      {/* shop buttons */}
+
+      {/* main content */}
+
     </div>
   );
 }
