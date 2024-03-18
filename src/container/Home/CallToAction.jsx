@@ -9,7 +9,7 @@ const CallToAction = () => {
                 </span>
                 <h1 className="featured-product-heading white-text">
                     XX99 Mark II
-                    HeadphoneS
+                    Headphones
                 </h1>
                 <p className="featured-product-description gray-text">
                     Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.

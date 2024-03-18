@@ -1,8 +1,10 @@
 .call-to-action-container {
-    // img {
-    //     height: 100%;
-    //     width: 100%;
-    // }
+    // Alignment styles **It may need to change**
+    display: flex;
+    flex-direction: column;
+
+
+    // size background image styles
     width: 100vw;
     height: 600px;
     background-image: url('./assets/mobile/image-header.jpg');
@@ -11,8 +13,24 @@
 
     .featured-product {
         background-image: url('./assets/mobile/image-header.jpg');
-        // height: 600px;
-        // width: 300px;
-        color: white;
+
+        .announcement-text {
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+
+        .featured-product-heading {
+            font-size: 30px;
+            font-weight: bold;
+            text-wrap: wrap;
+        }
+
+        .white-text {
+            color: white;
+        }
+
+        .gray-text {
+            color: gray;
+        }
     }
 }
