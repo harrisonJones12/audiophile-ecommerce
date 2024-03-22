@@ -6,31 +6,59 @@
 
     // size background image styles
     width: 100vw;
-    height: 600px;
+    height: 700px;
     background-image: url('./assets/mobile/image-header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+
+    //layout
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .featured-product {
-        background-image: url('./assets/mobile/image-header.jpg');
+        // background-image: url('./assets/mobile/image-header.jpg');
+        margin-top: 226px;
+        background: rgba(36, 32, 32, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 229px;
+        width: 362px;
+    }
 
-        .announcement-text {
-            letter-spacing: 6px;
-            text-transform: uppercase;
-        }
 
-        .featured-product-heading {
-            font-size: 30px;
-            font-weight: bold;
-            text-wrap: wrap;
-        }
 
-        .white-text {
-            color: white;
-        }
+    .announcement-text {
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
 
-        .gray-text {
-            color: gray;
-        }
+    .featured-product-heading {
+        font-size: 30px;
+        font-weight: bold;
+        text-wrap: wrap;
+    }
+
+    .white-text {
+        color: white;
+    }
+
+    .gray-text {
+        color: gray;
+    }
+
+    .see-product-button {
+        color: white;
+        background: #D87D4A;
+        border: none;
+        height: 50px;
+        width: 150px;
+        margin-top: 30px;
+        font-size: 13px;
     }
 }

@@ -1,3 +1,4 @@
+// import backgroundImage from './assets/mobile/image-header.jpg'
 
 const CallToAction = () => {
     return (
