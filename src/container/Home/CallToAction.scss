@@ -6,7 +6,7 @@
 
     // size background image styles
     width: 100vw;
-    height: 700px;
+    height: 750px;
     background-image: url('./assets/mobile/image-header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,16 +21,20 @@
 
     .featured-product {
         // background-image: url('./assets/mobile/image-header.jpg');
-        margin-top: 226px;
+        margin-top: 245px;
         background: rgba(36, 32, 32, 0.3);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        height: 229px;
+        height: 375px;
         width: 362px;
     }
 
+    .featured-product-description {
+        line-height: 30px;
+        font-size: 20px;
+    }
 
 
     .announcement-text {
@@ -39,7 +43,7 @@
     }
 
     .featured-product-heading {
-        font-size: 30px;
+        font-size: 50px;
         font-weight: bold;
         text-wrap: wrap;
     }
@@ -57,7 +61,7 @@
         background: #D87D4A;
         border: none;
         height: 50px;
-        width: 150px;
+        width: 180px;
         margin-top: 30px;
         font-size: 13px;
     }
