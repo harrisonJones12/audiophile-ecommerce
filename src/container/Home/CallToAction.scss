@@ -1,8 +1,4 @@
 .call-to-action-container {
-    // Alignment styles **It may need to change**
-    display: flex;
-    flex-direction: column;
-
 
     // size background image styles
     width: 100vw;
@@ -43,7 +39,7 @@
     }
 
     .featured-product-heading {
-        font-size: 50px;
+        font-size: 60px;
         font-weight: bold;
         text-wrap: wrap;
     }
@@ -65,4 +61,29 @@
         margin-top: 30px;
         font-size: 13px;
     }
+}
+
+// Media Queries
+
+@media only screen and (min-width: 768px) {
+    .call-to-action-container {
+
+        background-image: url('./assets/tablet/image-header.jpg');
+
+        .featured-product {
+            width: 469px;
+        }
+    }
+
+
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .call-to-action-container {
+        background-image: url('./assets/desktop/image-hero.jpg');
+
+    }
+
+
 }
