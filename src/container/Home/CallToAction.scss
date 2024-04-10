@@ -82,8 +82,22 @@
 @media only screen and (min-width: 1440px) {
     .call-to-action-container {
         background-image: url('./assets/desktop/image-hero.jpg');
+        align-items: start;
 
     }
 
+    .call-to-action-container {
+        .featured-product {
+            align-items: start;
+            width: auto;
+        }
+    }
+
+
+
+    .featured-product-description {
+        text-align: left;
+        width: 450px;
+    }
 
 }
