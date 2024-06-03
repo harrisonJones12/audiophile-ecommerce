@@ -9,8 +9,8 @@ import Cart from "container/Cart/Cart";
 
 function App() {
 
-  const [hideMobileProducts, sethideMobileProducts] = useState(true);
-  const [isDesktop, setIsDesktop] = useState(false)
+  const [hideMobileProducts, sethideMobileProducts] = useState<boolean>(true);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false)
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -31,7 +31,6 @@ function App() {
   }, [isDesktop])
 
   const handleResize = () => {
-
     if (window.innerWidth >= 1366) {
       setIsDesktop(true)
     } else {
