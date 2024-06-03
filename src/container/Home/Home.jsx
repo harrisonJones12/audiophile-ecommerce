@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 
 import CallToAction from "container/Home/CallToAction"
 
+import Productslist from "components/ProductsList/ProductsList";
+
 function Home({ hideMobileProducts, isDesktop }) {
 
 
@@ -16,6 +18,7 @@ function Home({ hideMobileProducts, isDesktop }) {
       {/* Add home content here */}
 
       <CallToAction />
+      <Productslist />
 
       {/* shop buttons */}
 
@@ -26,7 +29,7 @@ function Home({ hideMobileProducts, isDesktop }) {
 }
 
 Home.propTypes = {
-  hideMobileProducts: PropTypes.func,
+  hideMobileProducts: PropTypes.bool,
   isDesktop: PropTypes.bool
 };
 
