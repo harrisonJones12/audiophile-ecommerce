@@ -108,6 +108,7 @@
 
 @media (min-width: 768px) {
   .products-container {
+    justify-content: center;
     display: flex;
     flex-direction: row;
     height: auto;
