@@ -4,27 +4,11 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import { BrowserRouter } from "react-router-dom";
 //redux
 import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
-import createSagaMiddleware from "redux-saga";
 
-//react-router
-import { BrowserRouter } from "react-router-dom";
-
-//sagas and reducer
-import { helloSaga } from "app/sagas/sagas.js";
-import reducer from "app/reducer/reducer.ts";
-
-const sagaMiddleWare = createSagaMiddleware();
-const store = configureStore({
-  reducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleWare)
-})
-
-sagaMiddleWare.run(helloSaga);
-
-
+import store from './app/store'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,10 +1,16 @@
 import PropTypes from "prop-types";
 
+import { useEffect } from "react";
+
 import CallToAction from "container/Home/CallToAction"
 
 import Productslist from "components/ProductsList/ProductsList";
 
 function Home({ hideMobileProducts, isDesktop }) {
+
+  useEffect(() => {
+    console.log('it works');
+  }, []);
 
 
   return (
