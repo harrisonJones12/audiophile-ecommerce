@@ -20,7 +20,7 @@ const dispatch = useAppDispatch();
     dispatch(fetchProducts(
       getProductsUrl
     ))
-  },[dispatch,getProductsUrl]);
+  },[dispatch,getProductsUrl]); // I added these two here to silence the eslint errors
 
 
   return (
