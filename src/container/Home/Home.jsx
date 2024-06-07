@@ -20,7 +20,7 @@ const dispatch = useAppDispatch();
     dispatch(fetchProducts(
       getProductsUrl
     ))
-  });
+  },[dispatch,getProductsUrl]);
 
 
   return (
