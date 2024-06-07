@@ -13,25 +13,6 @@ const initialState: ShopState = {
     cart: {}
 };
 
-//TODO change action names 
-// export default function reducer(
-//     state = initialState,
-//     action
-// ) {
-//     switch (action.type) {
-//         case "ACTION1":
-//         case "GETPRODUCTSINSTOCK":
-//             return { ...state, products: { productsInstock: action.payload } };
-//         case "ADDITEMTOCART":
-//             return { ...state, cart: {} };
-//         case "ACTION3":
-//             return { ...state, showModal: false };
-//         case "ACTION4":
-//             return { ...state, loading: false, fetchResponse: action.jsonFetch };
-//         default:
-//             return state;
-//     }
-// }
 
 export const productsSlice = createSlice({
     name: 'counter',
@@ -39,10 +20,10 @@ export const productsSlice = createSlice({
     initialState,
     reducers: {
       getProductsInstock: (state, action) => {
-        state.products = action.payload
+        state.products = action.payload.data.products
       },
       addItemsToCart: (state, action) => {
-        state.cart = action.payload
+        state.cart = {...state.cart, ...action.payload}
       },
       // Use the PayloadAction type to declare the contents of `action.payload`
     //   incrementByAmount: (state, action: PayloadAction<number>) => {
