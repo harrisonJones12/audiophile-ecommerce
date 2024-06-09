@@ -10,7 +10,12 @@ import { fetchProducts } from 'app/actions/actions'
 
 import {useAppDispatch} from 'app/hooks'
 
-function Home({ hideMobileProducts, isDesktop }) {
+type Props = {
+  hideMobileProducts: boolean,
+   isDesktop: boolean
+}
+
+function Home({ hideMobileProducts, isDesktop }: Props) {
 
 
 const useLocal =  false;
@@ -44,9 +49,5 @@ const dispatch = useAppDispatch();
   );
 }
 
-Home.propTypes = {
-  hideMobileProducts: PropTypes.bool,
-  isDesktop: PropTypes.bool
-};
 
 export default Home;
