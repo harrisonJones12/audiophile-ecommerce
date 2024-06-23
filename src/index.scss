@@ -21,11 +21,11 @@ html {
 $black: #000;
 $black-secondary: #101010;
 $white-main: #fff;
-$main-background-offwhite: #F2F2F2;
+$main-background-offwhite: #f2f2f2;
 $white-secondary: #f1f1f1;
 $orange: #d87d4a;
 $orange-lighter: #fbaf85;
-$light-grey: #CFCFCF;
+$light-grey: #cfcfcf;
 
 @import "components/Navbar/Navbar.scss";
 @import "components/ProductsList/ProductsList.scss";
@@ -34,4 +34,5 @@ $light-grey: #CFCFCF;
 @import "components/InputField/InputField.scss";
 @import "components/Button/Button.scss";
 @import "components/CartSummary/CartSummary.scss";
-@import "container/Home/CallToAction.scss"
+@import "container/Home/CallToAction.scss";
+@import "components/ProductCard/ProductCard.scss";

@@ -8,51 +8,55 @@ import Home from "container/Home/Home";
 import Cart from "container/Cart/Cart";
 
 function App() {
-
   const [hideMobileProducts, sethideMobileProducts] = useState<boolean>(true);
-  const [isDesktop, setIsDesktop] = useState<boolean>(false)
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-  }, [])
+  }, []);
   /** 
   checks if screen is desktop width, 
   this is needed to render the desktopNavItems in the <NavBar /> Component
    */
   useEffect(() => {
     if (window.innerWidth >= 1366) {
-      setIsDesktop(true)
+      setIsDesktop(true);
     }
-  }, [])
+  }, []);
 
-  //resets mobile navigation state  
+  //resets mobile navigation state
   useEffect(() => {
     sethideMobileProducts(true);
-  }, [isDesktop])
+  }, [isDesktop]);
 
   const handleResize = () => {
     if (window.innerWidth >= 1366) {
-      setIsDesktop(true)
+      setIsDesktop(true);
     } else {
       setIsDesktop(false);
     }
-  }
+  };
 
   const hideMobileProductsMenu = () => {
-
     if (hideMobileProducts) {
       sethideMobileProducts(false);
     } else {
       sethideMobileProducts(true);
     }
-
   };
 
   return (
     <div className="App">
-      <Navbar hideMobileProductsMenu={hideMobileProductsMenu} hideMobileProducts={hideMobileProducts} isDesktop={isDesktop} />
+      <Navbar
+        hideMobileProductsMenu={hideMobileProductsMenu}
+        hideMobileProducts={hideMobileProducts}
+        isDesktop={isDesktop}
+      />
       <Routes>
-        <Route path="/" element={<Home hideMobileProducts={hideMobileProducts} />} />
+        <Route
+          path="/"
+          element={<Home hideMobileProducts={hideMobileProducts} />}
+        />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>

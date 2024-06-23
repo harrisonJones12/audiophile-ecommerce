@@ -1,0 +1,14 @@
+.product-card-main {
+  background-color: $orange;
+  height: 600px;
+  color: white;
+
+  // alignment
+  display: flex;
+  flex-direction: column;
+
+  .card-heading {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
