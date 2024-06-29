@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import InputField from "components/InputField/InputField";
 import Button from "components/Button/Button";
-import CartSummary from "components/CartSummary/CartSummary"
+import CartSummary from "components/CartSummary/CartSummary";
 
 const billingDetailsLabels = ["Name", "Email Address", "Phone Number"];
 
@@ -13,92 +13,98 @@ const paymentDetailsLabels = ["e-Money Number", "e-Money PIN"];
 const paymentTypesLabels = ["e-Money", "Cash on delivery"];
 
 const testObject = {
-    billingDetailsLabels,
-    shippingInfoLabels,
-    paymentDetailsLabels,
-    paymentTypesLabels
+  billingDetailsLabels,
+  shippingInfoLabels,
+  paymentDetailsLabels,
+  paymentTypesLabels,
 };
 
-const renderBillingDetailInputFields =
-    testObject.billingDetailsLabels.map((billingDetailsLabel, index) => {
-        console.log('billingDetailsLabel', billingDetailsLabel)
-        return (
-            <li className="billing-details-input-list-item">
-                <InputField labelText={billingDetailsLabel} id={billingDetailsLabel} />
-            </li>
-        )
-    });
+const renderBillingDetailInputFields = testObject.billingDetailsLabels.map(
+  (billingDetailsLabel) => {
+    return (
+      <li className="billing-details-input-list-item">
+        <InputField labelText={billingDetailsLabel} id={billingDetailsLabel} />
+      </li>
+    );
+  }
+);
 
-const renderShippingInfoInputFields =
-    testObject.shippingInfoLabels.map((shippingInfoLabel, index) => {
-        console.log('shippingInfoLabels', shippingInfoLabels)
-        return (
-            <li className="billing-details-input-list-item">
-                <InputField labelText={shippingInfoLabel} id={shippingInfoLabel} />
-            </li>
-        )
-    });
+const renderShippingInfoInputFields = testObject.shippingInfoLabels.map(
+  (shippingInfoLabel) => {
+    return (
+      <li className="billing-details-input-list-item">
+        <InputField labelText={shippingInfoLabel} id={shippingInfoLabel} />
+      </li>
+    );
+  }
+);
 
-const renderPaymentDetailsInputFields =
-    testObject.paymentDetailsLabels.map((paymentDetailLabel, index) => {
-        console.log('billingDetailsLabel', paymentDetailLabel)
-        return (
-            <li className="billing-details-input-list-item">
-                <InputField labelText={paymentDetailLabel} id={paymentDetailLabel} />
-            </li>
-        )
-    });
+const renderPaymentDetailsInputFields = testObject.paymentDetailsLabels.map(
+  (paymentDetailLabel) => {
+    return (
+      <li className="billing-details-input-list-item">
+        <InputField labelText={paymentDetailLabel} id={paymentDetailLabel} />
+      </li>
+    );
+  }
+);
 
-
-const renderPaymentDetailsInputRadioButtons =
-    testObject.paymentTypesLabels.map((paymentDetailLabel, index) => {
-        console.log('billingDetailsLabel', paymentDetailLabel)
-        return (
-            <li className="billing-details-input-list-item">
-                <Button text={paymentDetailLabel} label={paymentDetailLabel} type="radio" id={paymentDetailLabel} name="payment method" />
-            </li>
-        )
-    });
+const renderPaymentDetailsInputRadioButtons = testObject.paymentTypesLabels.map(
+  (paymentDetailLabel) => {
+    return (
+      <li className="billing-details-input-list-item">
+        <Button
+          text={paymentDetailLabel}
+          label={paymentDetailLabel}
+          type="radio"
+          id={paymentDetailLabel}
+          name="payment method"
+        />
+      </li>
+    );
+  }
+);
 
 export default function Cart() {
-    return (
-        <div className="main-cart-container">
-            {/* This needs to be able to look at the 
+  return (
+    <div className="main-cart-container">
+      {/* This needs to be able to look at the 
                 history and route back to 
                 where the user came from */}
-            <span className="go-back-text">
-                <Link to="/">
+      <span className="go-back-text">
+        <Link to="/">Go Back</Link>
+      </span>
+      <div className="checkout-container">
+        <h1 className="checkout-heading">Checkout</h1>
 
-                    Go Back
-
-                </Link>
-            </span>
-            <div className="checkout-container">
-                <h1 className="checkout-heading">Checkout</h1>
-
-                <form className="billing-details-form">
-                    <div className="billing-details-container">
-                        <h2 className="billing-details-subheading">Billing Details</h2>
-                        <ul className="billing-details-input-list">
-                            {renderBillingDetailInputFields}
-                        </ul>
-                    </div>
-                    <div className="shipping-details-list-container">
-                        <h2 className="shipping-details-subheading">Shipping Details</h2>
-                        <ul className="shipping-details-input-list">{renderShippingInfoInputFields}</ul>
-                    </div>
-                    <div className="payment-details-container">
-                        <h2 className="payment-details-subheading">Payment Details</h2>
-                        <ul className="payment-details-radio-button-list">{renderPaymentDetailsInputRadioButtons}</ul>
-                        <div className="payment-details-input-field-container">
-                            <ul className="payment-details-input-list"> {renderPaymentDetailsInputFields}</ul>
-
-                        </div>
-                    </div>
-                </form>
+        <form className="billing-details-form">
+          <div className="billing-details-container">
+            <h2 className="billing-details-subheading">Billing Details</h2>
+            <ul className="billing-details-input-list">
+              {renderBillingDetailInputFields}
+            </ul>
+          </div>
+          <div className="shipping-details-list-container">
+            <h2 className="shipping-details-subheading">Shipping Details</h2>
+            <ul className="shipping-details-input-list">
+              {renderShippingInfoInputFields}
+            </ul>
+          </div>
+          <div className="payment-details-container">
+            <h2 className="payment-details-subheading">Payment Details</h2>
+            <ul className="payment-details-radio-button-list">
+              {renderPaymentDetailsInputRadioButtons}
+            </ul>
+            <div className="payment-details-input-field-container">
+              <ul className="payment-details-input-list">
+                {" "}
+                {renderPaymentDetailsInputFields}
+              </ul>
             </div>
-            <CartSummary />
-        </div>
-
-    )
+          </div>
+        </form>
+      </div>
+      <CartSummary />
+    </div>
+  );
 }

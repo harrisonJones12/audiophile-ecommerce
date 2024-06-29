@@ -16,7 +16,7 @@ type Props = {
 };
 
 function Home({ hideMobileProducts, isDesktop }: Props) {
-  const useLocal = false;
+  const useLocal: boolean = true;
 
   const getProductsUrl = useLocal
     ? "http://localhost:5050/get-products"
@@ -26,7 +26,7 @@ function Home({ hideMobileProducts, isDesktop }: Props) {
 
   useEffect(() => {
     dispatch(fetchProducts(getProductsUrl));
-  }, [dispatch, getProductsUrl]); // I added these two here to silence the eslint errors
+  }); // I added these two here to silence the eslint errors
 
   return (
     <div className="Home-container" data-testid="home-container">

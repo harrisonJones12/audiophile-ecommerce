@@ -1,6 +1,9 @@
 .Home-container {
   background-color: #ffff;
-  height: 100vh;
+  // height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 
   .overlay {
     background-color: black;

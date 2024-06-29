@@ -5,10 +5,36 @@
 
   // alignment
   display: flex;
+  align-items: center;
   flex-direction: column;
+  margin: 0 24px;
 
   .card-heading {
     font-size: 30px;
     font-weight: bold;
+    margin: 20px 0;
+    width: 150px;
+  }
+
+  .product-card-description {
+    margin: 0 0 30px 0;
+    height: 75px;
+    width: 280px;
+
+    @include body-text-styles;
+  }
+  .mobile-picture {
+    height: 200px;
+    width: 172px;
+  }
+  .product-card-inner {
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
+
+// .product-card-secondary {
+
+// }

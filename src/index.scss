@@ -17,6 +17,11 @@ html {
   height: 100%;
 }
 
+@mixin body-text-styles {
+  font-size: 15px;
+  line-height: 25px;
+}
+
 // Varibles
 $black: #000;
 $black-secondary: #101010;
@@ -36,3 +41,4 @@ $light-grey: #cfcfcf;
 @import "components/CartSummary/CartSummary.scss";
 @import "container/Home/CallToAction.scss";
 @import "components/ProductCard/ProductCard.scss";
+@import "container/FeaturedProducts/FeaturedProducts.scss";

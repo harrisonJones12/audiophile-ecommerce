@@ -3,7 +3,8 @@ type Props = {
   label: string;
   id: string;
   text: string;
-  color: string;
+  color?: string;
+  name: string;
 };
 
 export default function Button({
