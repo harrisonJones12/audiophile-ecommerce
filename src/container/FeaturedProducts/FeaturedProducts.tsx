@@ -32,20 +32,21 @@ const FeaturedProducts = () => {
       />
       <div className="second-featured-product">
         <ProductCard
-          className="yes"
-          cardSubHeading={getProducts[0]?.slug}
-          description={getProducts[0]?.description}
-          mobilePicture={yx1Image}
-          tabletPicture={tabletYx1Image}
-          desktopImage={desktopYx1Image}
+          cardSubHeading="ZX7 SPEAKER"
+          description={getProducts[1]?.description}
+          isMiddleCard
+          mobilePicture={zx7mage}
+          tabletPicture={tabletZx7mage}
+          desktopImage={desktopZx7mage}
         />
       </div>
       <ProductCard
-        cardSubHeading={getProducts[1]?.slug}
-        description={getProducts[1]?.description}
-        mobilePicture={zx7mage}
-        tabletPicture={tabletZx7mage}
-        desktopImage={desktopZx7mage}
+        className="yes"
+        cardSubHeading={getProducts[0]?.slug}
+        description={getProducts[0]?.description}
+        mobilePicture={yx1Image}
+        tabletPicture={tabletYx1Image}
+        desktopImage={desktopYx1Image}
       />
     </div>
   );

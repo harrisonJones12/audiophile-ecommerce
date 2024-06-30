@@ -1,6 +1,7 @@
 .product-card-main {
   background-color: $orange;
   height: 600px;
+  width: 320px;
   color: white;
 
   // alignment
@@ -10,7 +11,7 @@
   margin: 0 24px;
 
   .card-heading {
-    font-size: 30px;
+    font-size: 33px;
     font-weight: bold;
     margin: 20px 0;
     width: 150px;
@@ -32,6 +33,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.second-product-card-main {
+  background-image: url("../../container/FeaturedProducts/assets/mobile/image-speaker-zx7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: center;
+
+  //dimensions
+  height: 327px;
+  width: 320px;
+
+  .card-heading {
+    font-size: 33px;
+    font-weight: bold;
+    margin: 20px 0;
+    // width: 150px;
+  }
+
+  .heading-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 15px;
+    justify-content: center;
+    height: 100%;
   }
 }
 
