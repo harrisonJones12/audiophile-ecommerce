@@ -35,6 +35,24 @@ const ProductCard = ({
     </div>
   );
 
+  const thirdCardStructure = (
+    <div className="third-product-card-main">
+      <div className="image-container"></div>
+      <div className="heading-button-container">
+        <div className="heading-button-inner-container">
+          <h3 className="card-heading"> {cardSubHeading} </h3>
+          <Button
+            text="See product"
+            label="test button"
+            type="regular-button"
+            id="customn-id"
+            name="see product"
+          />
+        </div>
+      </div>
+    </div>
+  );
+
   const mainCardStructure = (
     <div className="product-card-main">
       <div className="product-card-inner">
@@ -68,6 +86,10 @@ const ProductCard = ({
 
   if (isMiddleCard) {
     return middleCardStructure;
+  }
+
+  if (thirdCardStructure) {
+    return thirdCardStructure;
   }
 };
 

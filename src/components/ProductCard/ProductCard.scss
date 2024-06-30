@@ -65,6 +65,44 @@
   }
 }
 
+.third-product-card-main {
+  .image-container {
+    //dimensions
+    height: 327px;
+    width: 320px;
+
+    background-image: url("../../container/FeaturedProducts/assets/mobile/image-earphones-yx1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+  }
+  .card-heading {
+    font-size: 33px;
+    font-weight: bold;
+    margin: 20px 0;
+    // width: 150px;
+  }
+  .heading-button-container {
+    //dimensions
+    height: 200px;
+    width: 320px;
+    background-color: $white-secondary;
+    margin-top: 40px;
+
+    .heading-button-inner-container {
+      // margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 20px 0 0 15px;
+      // padding-top: 20px;
+      justify-content: center;
+    }
+  }
+}
+
 // .product-card-secondary {
 
 // }

@@ -41,8 +41,7 @@ const FeaturedProducts = () => {
         />
       </div>
       <ProductCard
-        className="yes"
-        cardSubHeading={getProducts[0]?.slug}
+        cardSubHeading="YX1 EARPHONES"
         description={getProducts[0]?.description}
         mobilePicture={yx1Image}
         tabletPicture={tabletYx1Image}
