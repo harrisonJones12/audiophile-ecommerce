@@ -22,6 +22,13 @@ html {
   line-height: 25px;
 }
 
+@mixin heading-h3-text-styles {
+  font-size: 32px;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 // Varibles
 $black: #000;
 $black-secondary: #101010;
@@ -42,3 +49,4 @@ $light-grey: #cfcfcf;
 @import "container/Home/CallToAction.scss";
 @import "components/ProductCard/ProductCard.scss";
 @import "container/FeaturedProducts/FeaturedProducts.scss";
+@import "container/Footer/Footer.scss";

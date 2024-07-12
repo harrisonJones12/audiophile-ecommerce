@@ -1,0 +1,28 @@
+.footer-main-container {
+  background-color: $black;
+  height: 654px;
+  width: 375px;
+
+  .footer-link-items {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    .home:hover,
+    .headphones:hover,
+    .speakers:hover,
+    .earphones:hover {
+      color: #fbaf85;
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

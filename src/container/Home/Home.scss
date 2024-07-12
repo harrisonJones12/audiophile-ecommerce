@@ -9,4 +9,25 @@
     background-color: black;
     opacity: 0.4;
   }
+
+  .about-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .about-text {
+      height: 250px;
+      width: 327px;
+      @include body-text-styles;
+    }
+
+    .about-heading-text {
+      @include heading-h3-text-styles .best-text {
+        color: $orange;
+      }
+    }
+    .about-section-image {
+      height: 300px;
+      width: 327px;
+    }
+  }
 }
